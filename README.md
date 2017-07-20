@@ -1,6 +1,6 @@
 # Toast For Managers 
 
-<img style="margin: 0 auto; text-align: center; width: 300px;" src="./img/toast_for_managers.png"/>
+<img style="margin: 0 auto; text-align: center; width: 300px;" src="./src/img/toast_for_managers.png"/>
 
 <!-- 
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/fact/header._TTH_.png" />
