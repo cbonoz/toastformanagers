@@ -88,9 +88,8 @@ const queryHandlers = {
                     }
                 }
                 total = Math.round(total * 100) / 100;
-                self.emit(':tell',
-                    `On ${orderDate}, you had ${pl('orders', ordersLength, true)} with ${pl('checks', numChecks, true)}` +
-                    ` for a total of $${total}`);
+                const orderDateString = moment(orderDate).format("dddd, MMMM Do YYYY");
+                self.emit(':tell', `On ${orderDateString}, you had ${pl('orders', ordersLength, true)} with ${pl('checks', numChecks, true)} for a total of $${total}`);
                 //, toast.QUERY_REPROMPT_TEXT);
             }).catch((err) => { // Catch any errors.
                 console.error('error in co: ' + err);

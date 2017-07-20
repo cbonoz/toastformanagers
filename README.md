@@ -14,12 +14,12 @@ predefined commands.
 ## Ok, so how do I interact with Toast For Managers?
 
 *  "Alexa, ask Toast for Managers for my sales for today.
-*  "Alexa, ask Toast for Managers for my sales on July 15th, 2017. 
-*  "Alexa, ask Toast for Managers to compare my sales today to my sales yesterday. 
+*  "Alexa, ask Toast for Managers for my orders yesterday.
+*  "Alexa, ask Toast for Managers for my sales on July 15 2017. 
 
 <b><i>Alexa will respond to these requests with responses like these:</i></b>
 
-*  "For today were $2,467.65. (Say another command, or say help for a list of example questions)
+*  "On July 15 2017, there were $2,467.65. (Say another command, or say help for a list of example questions)
 <!-- TODO: Add more example responses -->
 
 ## Future Work:
