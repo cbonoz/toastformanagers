@@ -1,0 +1,635 @@
+{
+  "guid": "426a49ae-f3f7-48e8-a785-30790e51a62f",
+  "entityType": "Order",
+  "externalId": null,
+  "revenueCenter": null,
+  "server": {
+    "guid": "aaecdd57-7e40-40de-b058-2be456f3f8c5",
+    "entityType": "RestaurantUser",
+    "externalId": null
+  },
+  "deliveryInfo": {
+    "address1": "195 Tower St",
+    "address2": null,
+    "city": "Dedham",
+    "state": "MA",
+    "zipCode": "02026",
+    "latitude": null,
+    "longitude": null,
+    "notes": null,
+    "deliveredDate": "2017-07-10T14:44:47.869+0000",
+    "dispatchedDate": "2017-07-10T14:44:44.309+0000",
+    "deliveryEmployee": {
+      "guid": "9fdf3970-a5d7-4b56-ad10-27e0b8ddda21",
+      "entityType": "RestaurantUser",
+      "externalId": null
+    }
+  },
+  "serviceArea": null,
+  "numberOfGuests": 1,
+  "diningOption": {
+    "guid": "cb5512b3-e5c4-4502-aa10-73661e5fee04",
+    "entityType": "DiningOption",
+    "externalId": null
+  },
+  "source": "Caller Id",
+  "voidDate": null,
+  "openedDate": "2017-07-07T21:23:48.861+0000",
+  "duration": 235240,
+  "businessDate": 20170707,
+  "voidBusinessDate": null,
+  "checks": [
+    {
+      "guid": "8fb453c6-0b2b-4776-bcad-670e3e04878c",
+      "entityType": "Check",
+      "externalId": null,
+      "displayNumber": "1518355",
+      "amount": 1.8,
+      "tabName": "WEB stuart macdonald Order 1518355\r\n",
+      "taxExempt": false,
+      "payments": [
+        {
+          "guid": "04b740c9-82ea-4382-b311-c2e68cdba4d0",
+          "entityType": "OrderPayment",
+          "externalId": null,
+          "originalProcessingFee": 0,
+          "amount": 6.39,
+          "tipAmount": 0,
+          "amountTendered": null,
+          "cashDrawer": null,
+          "cardType": "VISA",
+          "refundStatus": "FULL",
+          "houseAccount": null,
+          "type": "CREDIT",
+          "voidInfo": null,
+          "otherPayment": null,
+          "paidDate": "2017-07-07T21:23:48.862+0000",
+          "cardEntryMode": null,
+          "paymentStatus": "CAPTURED",
+          "paidBusinessDate": 20170707,
+          "last4Digits": "9305",
+          "refund": {
+            "refundAmount": 6.39,
+            "tipRefundAmount": 0,
+            "refundDate": "2017-07-08T18:15:20.977+0000",
+            "refundBusinessDate": 20170708
+          }
+        },
+        {
+          "guid": "aab2df18-8cdb-400e-bf7f-9c599d00e6e8",
+          "entityType": "OrderPayment",
+          "externalId": null,
+          "originalProcessingFee": null,
+          "amount": 2.5,
+          "tipAmount": 0,
+          "amountTendered": 2.5,
+          "cashDrawer": {
+            "guid": "76ddcd38-c224-4358-8f36-19315bde1960",
+            "entityType": "CashDrawer",
+            "externalId": null
+          },
+          "cardType": null,
+          "refundStatus": "NONE",
+          "houseAccount": null,
+          "type": "CASH",
+          "voidInfo": null,
+          "otherPayment": null,
+          "paidDate": "2017-07-10T14:44:29.806+0000",
+          "cardEntryMode": null,
+          "paymentStatus": "CAPTURED",
+          "paidBusinessDate": 20170710,
+          "last4Digits": null,
+          "refund": null
+        }
+      ],
+      "appliedDiscounts": [
+        {
+          "guid": "221a36f2-c89b-47ee-bbb2-98bbc801b4b3",
+          "entityType": "AppliedLoyaltyProviderDiscount",
+          "approver": null,
+          "processingState": "APPLIED",
+          "loyaltyDetails": {
+            "vendor": "PAYTRONIX",
+            "referenceId": "4"
+          },
+          "name": "LOY - Rewards Dollars/Loyalty Program",
+          "comboItems": [],
+          "discountAmount": 15,
+          "discount": {
+            "guid": "f750129d-145f-463d-b8c4-5e474bdf4e43",
+            "entityType": "Discount"
+          },
+          "triggers": [],
+          "appliedPromoCode": "1799"
+        },
+        {
+          "guid": "ebc576f1-832f-4bd6-8368-894aa3f2bb3c",
+          "entityType": "AppliedCustomDiscount",
+          "approver": {
+            "guid": "4062eb66-8d0b-456d-b510-ddf56c0ee422",
+            "entityType": "RestaurantUser",
+            "externalId": null
+          },
+          "processingState": null,
+          "loyaltyDetails": null,
+          "name": "Discount $",
+          "comboItems": [],
+          "discountAmount": 5.97,
+          "discount": {
+            "guid": "28cd0483-f2f5-4b44-bf29-1660d52866ab",
+            "entityType": "Discount"
+          },
+          "triggers": [],
+          "appliedPromoCode": null
+        }
+      ],
+      "voidDate": null,
+      "openedDate": "2017-07-07T21:23:48.862+0000",
+      "totalAmount": 2.5,
+      "selections": [
+        {
+          "guid": "006bc055-135c-4e84-8962-d4ec3847b54e",
+          "entityType": "MenuItemSelection",
+          "externalId": null,
+          "itemGroup": {
+            "guid": "5b4c7e15-92a6-4c88-9b7a-13d76e4349d8",
+            "entityType": "MenuGroup",
+            "externalId": null
+          },
+          "deferred": false,
+          "item": {
+            "guid": "9186ac4e-7b48-4f10-bd4b-0cd0724fc4af",
+            "entityType": "MenuItem",
+            "externalId": null
+          },
+          "quantity": 2,
+          "preDiscountPrice": 13.98,
+          "voidReason": null,
+          "optionGroup": null,
+          "displayName": "Spaghetti with Meatballs",
+          "appliedDiscounts": [],
+          "tax": 0,
+          "modifiers": [
+            {
+              "guid": "393b4eb7-e102-48c0-87a3-d8a86ac37015",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "a1b01476-2c04-4dcc-b8e1-96e90b303295",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 2,
+              "preDiscountPrice": 0,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "dc25f276-f709-44f7-9a5a-6936d14b460d",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "Romano Cheese",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.690+0000",
+              "preModifier": null,
+              "price": 0,
+              "modifiedDate": "2017-07-07T21:23:54.051+0000",
+              "voided": false,
+              "appliedTaxes": []
+            },
+            {
+              "guid": "3a139075-d147-494a-a330-3bc6ce1e4cb3",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "fdf5bb7e-c450-4f57-8ccc-375c0ab9ce67",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 2,
+              "preDiscountPrice": 0,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "dc25f276-f709-44f7-9a5a-6936d14b460d",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "Marinara",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.692+0000",
+              "preModifier": null,
+              "price": 0,
+              "modifiedDate": "2017-07-07T21:23:54.061+0000",
+              "voided": false,
+              "appliedTaxes": []
+            },
+            {
+              "guid": "2a944749-5531-4bff-978b-8ca50b8def59",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "761973f7-b265-418e-9661-fc01591e2050",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 2,
+              "preDiscountPrice": 0,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "dc25f276-f709-44f7-9a5a-6936d14b460d",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "2 Meatballs",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.694+0000",
+              "preModifier": null,
+              "price": 0,
+              "modifiedDate": "2017-07-07T21:23:54.070+0000",
+              "voided": false,
+              "appliedTaxes": []
+            },
+            {
+              "guid": "7d6f6ab5-bb1d-4fdf-8be8-c3b8b5d29138",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "2fda44f9-5674-4bc4-a71a-b0214b09fb65",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 2,
+              "preDiscountPrice": 0,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "dc25f276-f709-44f7-9a5a-6936d14b460d",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "2 Breadsticks",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.695+0000",
+              "preModifier": null,
+              "price": 0,
+              "modifiedDate": "2017-07-07T21:23:54.080+0000",
+              "voided": false,
+              "appliedTaxes": []
+            }
+          ],
+          "voidDate": null,
+          "fulfillmentStatus": "SENT",
+          "salesCategory": {
+            "guid": "7b891c8b-9e06-4207-978d-d139075c1245",
+            "entityType": "SalesCategory",
+            "externalId": null
+          },
+          "selectionType": "NONE",
+          "voidBusinessDate": null,
+          "createdDate": "2017-07-07T21:23:49.699+0000",
+          "preModifier": null,
+          "price": 0,
+          "modifiedDate": "2017-07-10T14:44:33.350+0000",
+          "voided": false,
+          "appliedTaxes": [
+            {
+              "entityType": "AppliedTaxRate",
+              "taxRate": {
+                "guid": "3752396d-4b62-4372-9ad4-ff435cb5d234",
+                "entityType": "TaxRate"
+              },
+              "name": "State Tax",
+              "rate": 0.0625,
+              "taxAmount": 0,
+              "type": "PERCENT"
+            },
+            {
+              "entityType": "AppliedTaxRate",
+              "taxRate": {
+                "guid": "e659bc24-6fd6-4880-acff-2eefcc3e2a48",
+                "entityType": "TaxRate"
+              },
+              "name": "Local Tax",
+              "rate": 0.0075,
+              "taxAmount": 0,
+              "type": "PERCENT"
+            }
+          ]
+        },
+        {
+          "guid": "62d4c53f-bf9b-4370-bbae-a34c9358e026",
+          "entityType": "MenuItemSelection",
+          "externalId": null,
+          "itemGroup": {
+            "guid": "1f8d604f-4c55-498e-8e46-73708d1f84fd",
+            "entityType": "MenuGroup",
+            "externalId": null
+          },
+          "deferred": false,
+          "item": {
+            "guid": "d7bdcf94-1d6c-4bbf-b627-f51d3a5416df",
+            "entityType": "MenuItem",
+            "externalId": null
+          },
+          "quantity": 1,
+          "preDiscountPrice": 6.99,
+          "voidReason": null,
+          "optionGroup": null,
+          "displayName": "Meatball Parmigiana",
+          "appliedDiscounts": [],
+          "tax": 0,
+          "modifiers": [
+            {
+              "guid": "70f94ad8-e261-4a45-bf03-e0b5d4eff4b8",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "4f121930-0d3c-43e5-93ac-117f81f36541",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 1,
+              "preDiscountPrice": 6.99,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "e6b195ea-e15e-4dd4-9891-79528f3a7534",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "Large",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.701+0000",
+              "preModifier": null,
+              "price": 6.99,
+              "modifiedDate": "2017-07-07T21:23:54.101+0000",
+              "voided": false,
+              "appliedTaxes": []
+            },
+            {
+              "guid": "fdd57dfd-082a-4968-ba55-4b34d960a1e1",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "99a692af-465d-4f89-b8e5-2ce5c839fe6d",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 1,
+              "preDiscountPrice": 0,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "3f8e0444-f895-4c6a-bea2-73e221a4de23",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "Marinara",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [
+                {
+                  "guid": "41b478e4-a973-42d9-841e-6b914cb16c18",
+                  "entityType": "MenuItemSelection",
+                  "externalId": null,
+                  "itemGroup": null,
+                  "deferred": false,
+                  "item": {
+                    "guid": "1343c1e1-f1e0-492d-af7e-a5bcba04fbf2",
+                    "entityType": "MenuItem",
+                    "externalId": null
+                  },
+                  "quantity": 1,
+                  "preDiscountPrice": 0.6,
+                  "voidReason": null,
+                  "optionGroup": {
+                    "guid": "3d8bf9d6-11d7-4d5b-94a4-67d654e385eb",
+                    "entityType": "MenuOptionGroup",
+                    "externalId": null
+                  },
+                  "displayName": "Large",
+                  "appliedDiscounts": [],
+                  "tax": 0,
+                  "modifiers": [],
+                  "voidDate": null,
+                  "fulfillmentStatus": "SENT",
+                  "salesCategory": null,
+                  "selectionType": "NONE",
+                  "voidBusinessDate": null,
+                  "createdDate": "2017-07-07T21:23:49.702+0000",
+                  "preModifier": null,
+                  "price": 0.6,
+                  "modifiedDate": "2017-07-07T21:23:54.116+0000",
+                  "voided": false,
+                  "appliedTaxes": []
+                }
+              ],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.704+0000",
+              "preModifier": null,
+              "price": 0,
+              "modifiedDate": "2017-07-10T14:44:33.375+0000",
+              "voided": false,
+              "appliedTaxes": []
+            },
+            {
+              "guid": "db8fdd00-8925-4206-a43b-fd9875ce055f",
+              "entityType": "MenuItemSelection",
+              "externalId": null,
+              "itemGroup": null,
+              "deferred": false,
+              "item": {
+                "guid": "a72e08cb-aa01-4ac4-ba28-d888c2295255",
+                "entityType": "MenuItem",
+                "externalId": null
+              },
+              "quantity": 1,
+              "preDiscountPrice": 0,
+              "voidReason": null,
+              "optionGroup": {
+                "guid": "3f8e0444-f895-4c6a-bea2-73e221a4de23",
+                "entityType": "MenuOptionGroup",
+                "externalId": null
+              },
+              "displayName": "Pickles",
+              "appliedDiscounts": [],
+              "tax": 0,
+              "modifiers": [],
+              "voidDate": null,
+              "fulfillmentStatus": "SENT",
+              "salesCategory": null,
+              "selectionType": "NONE",
+              "voidBusinessDate": null,
+              "createdDate": "2017-07-07T21:23:49.705+0000",
+              "preModifier": null,
+              "price": 0,
+              "modifiedDate": "2017-07-07T21:23:54.133+0000",
+              "voided": false,
+              "appliedTaxes": []
+            }
+          ],
+          "voidDate": null,
+          "fulfillmentStatus": "SENT",
+          "salesCategory": {
+            "guid": "f8f0a024-65e8-4a45-9762-fc260465343c",
+            "entityType": "SalesCategory",
+            "externalId": null
+          },
+          "selectionType": "NONE",
+          "voidBusinessDate": null,
+          "createdDate": "2017-07-07T21:23:49.709+0000",
+          "preModifier": null,
+          "price": 0,
+          "modifiedDate": "2017-07-10T14:44:33.390+0000",
+          "voided": false,
+          "appliedTaxes": [
+            {
+              "entityType": "AppliedTaxRate",
+              "taxRate": {
+                "guid": "e659bc24-6fd6-4880-acff-2eefcc3e2a48",
+                "entityType": "TaxRate"
+              },
+              "name": "Local Tax",
+              "rate": 0.0075,
+              "taxAmount": 0,
+              "type": "PERCENT"
+            },
+            {
+              "entityType": "AppliedTaxRate",
+              "taxRate": {
+                "guid": "3752396d-4b62-4372-9ad4-ff435cb5d234",
+                "entityType": "TaxRate"
+              },
+              "name": "State Tax",
+              "rate": 0.0625,
+              "taxAmount": 0,
+              "type": "PERCENT"
+            }
+          ]
+        }
+      ],
+      "voidBusinessDate": null,
+      "deleted": false,
+      "paidDate": "2017-07-10T14:44:29.802+0000",
+      "closedDate": "2017-07-10T14:44:29.802+0000",
+      "deletedDate": null,
+      "modifiedDate": "2017-07-10T14:44:49.260+0000",
+      "appliedLoyaltyInfo": {
+        "guid": "a7bcdfce-0e9b-45bf-b909-300009cc8d76",
+        "entityType": "AppliedLoyaltyInfo",
+        "accrualText": "6 Points Earned",
+        "accrualFamilyGuid": "993f1fd3-0eca-4d53-977f-34e9d13b016c",
+        "vendor": "PAYTRONIX",
+        "loyaltyIdentifier": "8000000129373562"
+      },
+      "voided": false,
+      "taxAmount": 0,
+      "appliedServiceCharges": [
+        {
+          "guid": "a621c06c-1f38-436c-bbb1-608fea045cfd",
+          "entityType": "AppliedServiceCharge",
+          "externalId": null,
+          "delivery": true,
+          "serviceCharge": {
+            "guid": "76e6efd1-0c30-42f2-b1f7-a7e56c0e45a8",
+            "entityType": "ServiceCharge",
+            "externalId": null
+          },
+          "taxable": false,
+          "chargeType": "FIXED",
+          "name": "Delivery Charge",
+          "gratuity": false,
+          "chargeAmount": 1.8,
+          "appliedTaxes": []
+        },
+        {
+          "guid": "93dce12b-27c1-44ea-ad8c-82730367f9c8",
+          "entityType": "AppliedServiceCharge",
+          "externalId": null,
+          "delivery": true,
+          "serviceCharge": {
+            "guid": "71076262-f27b-4b00-af8e-0c276bcb0b19",
+            "entityType": "ServiceCharge",
+            "externalId": null
+          },
+          "taxable": false,
+          "chargeType": "FIXED",
+          "name": "Driver Delivery Fee",
+          "gratuity": true,
+          "chargeAmount": 0.7,
+          "appliedTaxes": []
+        }
+      ],
+      "paymentStatus": "CLOSED",
+      "customer": {
+        "guid": "dfaff828-e06f-4cf5-a536-1603c9dfe0e3",
+        "entityType": "Customer",
+        "firstName": "TRICIA",
+        "lastName": "MACDONALD",
+        "phone": "7813810267",
+        "email": "tbennett35@aol.com"
+      }
+    }
+  ],
+  "deleted": false,
+  "paidDate": "2017-07-10T14:44:29.802+0000",
+  "closedDate": "2017-07-10T14:44:29.802+0000",
+  "deletedDate": null,
+  "restaurantService": {
+    "guid": "f839a82c-4757-4749-94c0-dcc2b98048b0",
+    "entityType": "RestaurantService",
+    "externalId": null
+  },
+  "modifiedDate": "2017-07-10T14:44:49.272+0000",
+  "promisedDate": null,
+  "voided": false,
+  "estimatedFulfillmentDate": "2017-07-07T21:53:48.861+0000",
+  "table": null
+}

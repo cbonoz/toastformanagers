@@ -1,14 +1,7 @@
-GetNewFactIntent ein Faktum
-GetNewFactIntent ein Faktum über den Weltraum
-GetNewFactIntent sage mir ein Faktum
-GetNewFactIntent sage mir ein Faktum über den Weltraum
-GetNewFactIntent gib mir ein Faktum
-GetNewFactIntent gib mir ein Faktum über den Weltraum
-GetNewFactIntent erzähle mir Wissenswertes
-GetNewFactIntent erzähle mir Wissenswertes über den Weltraum
-GetNewFactIntent sage mir etwas Wissenswertes
-GetNewFactIntent sage mir etwas wissenswertes über den Weltraum
-GetNewFactIntent gib mir Informationen
-GetNewFactIntent gib mir Informationen über den Weltraum
-GetNewFactIntent sage mir etwas
-GetNewFactIntent erzähle mir etwas
+OrderIntent my sales for {Date}
+OrderIntent my sales on {Date}
+OrderIntent my orders for {Date}
+OrderIntent my orders on {Date}
+EmployeeIntent my employees
+
+

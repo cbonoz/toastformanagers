@@ -1,51 +1,19 @@
 {
   "intents": [
     {
-      "intent": "LaunchIntent"
+      "intent": "LaunchRequest"
     },
     {
-      "intent": "NewPortfolioIntent"
-    },
-    {
-      "intent": "QuoteIntent",
+      "intent": "OrderIntent",
       "slots": [
         {
-          "name": "Stock",
-          "type": "STOCK"
+          "name": "Date",
+          "type": "AMAZON.DATE"
         }
       ]
     },
     {
-      "intent": "BuyIntent",
-      "slots": [
-        {
-          "name": "Stock",
-          "type": "STOCK"
-        },
-        {
-          "name": "Amount",
-          "type": "AMAZON.NUMBER"
-        }
-      ]
-    },
-    {
-      "intent": "SellIntent",
-      "slots": [
-        {
-          "name": "Stock",
-          "type": "STOCK"
-        },
-        {
-          "name": "Amount",
-          "type": "AMAZON.NUMBER"
-        }
-      ]
-    },
-    {
-      "intent": "PortfolioIntent"
-    },
-    {
-      "intent": "RestartIntent"
+      "intent": "EmployeeIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"

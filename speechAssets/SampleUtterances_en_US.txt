@@ -1,5 +1,10 @@
+OrderIntent my sales for {Date}
+OrderIntent my sales on {Date}
+OrderIntent my sales {Date}
+OrderIntent my orders for {Date}
+OrderIntent my orders {Date}
+OrderIntent my orders from {Date}
 
-RestartIntent start over
-RestartIntent new game
-RestartIntent restart
+EmployeeIntent my employees
+
 
