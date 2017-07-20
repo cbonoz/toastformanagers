@@ -33,9 +33,6 @@ const states = {
     RESTARTMODE: '_RESTARTMODE'
 };
 
-const rsGuid = key.rsGuid;
-let accessToken = "eyJhbGciOiJSUzI1NiJ9.eyJuYW1pbmdBdXRob3JpdHkiOiJDQk9OTyIsInJzR3VpZCI6ImQ5MTE4ODQ0LTY4YWYtNDQ2NC1hMjRjLTVlMjk5MWY3YjZhMyIsInNjb3BlIjpbIkNCT05PIl0sImV4cCI6MTUwMDU4NjA0MSwianRpIjoiMWU2YTdiOTYtOGY4Mi00ZDE3LTg5NGYtODdhYjYwMzM3YmQ5IiwiY2xpZW50X2lkIjoiY2Jvbm8tcGcifQ.kAKHmB35Lp0GLU7yR6in20sVicxXs2Gg8VpBZFfi2XbDsX-lO6Kld0T5zY3siDzBofpLnth8VpM7HgqnXp7_yVyU83gDMNxMCjlyNN5gjMu2MIhDmKIPP5vpnHlcptX_uaZ8Yg90pdvfIhbrhdH12FjFg2z-uQtL8ZkKjsslmxFLEWeXOnTBE74D9Vng95SHpaYoLiUz_LHQ0Ua3Qh-NLan-T2OUWL6vpYZUB1c3ZnR2izKNE6a6rc4h_mFDeZmzA2NpZJ6E8frAjgdN5UA9bxXZyusk6TDZ3KtGa_70beCgK6cBXevz9V39q_CluxgKfKFt-REcrJOaCn3VwG967g";
-
 const queryHandlers = {
     'LaunchRequest': function () {
         // TODO: fetch auth token after the user has registered through auth callback online.
@@ -47,7 +44,7 @@ const queryHandlers = {
             }
             console.log("auth response body: " + body);
             const r = JSON.parse(body);
-            accessToken = r.access_token;
+            const accessToken = r.access_token;
             self.attributes['tok'] = accessToken;
             console.log("accessToken: " + accessToken);
             self.emit(':ask', toast.WELCOME_TEXT + toast.QUERY_TEXT, toast.HELP_TEXT);
@@ -79,7 +76,7 @@ const queryHandlers = {
                 for (let i = 0; i < ordersLength; i++) {
                     const orderGuid = res[i];
                     const orderUrl = api.getOrderInfo(orderGuid);
-                    const json = yield api.createPromise(orderUrl, "GET", accessToken, key.rguid);
+                    const json = yield api.createPromise(orderUrl, "GET", tok, key.rguid);
                     // const json = JSON.parse(response);
                     for (let j in json.checks) {
                         const check = json.checks[j];
@@ -106,8 +103,9 @@ const queryHandlers = {
     'EmployeeIntent': function () {
         const self = this;
 
+        const tok = self.attributes['tok'];
         const requestUrl = api.getEmployees();
-        const promise = api.createPromise(requestUrl, "GET", accessToken, key.rguid);
+        const promise = api.createPromise(requestUrl, "GET", tok, key.rguid);
         promise.then(function (res) {
             console.log(`${requestUrl}: ${res}`);
         }).catch(function (err) {
