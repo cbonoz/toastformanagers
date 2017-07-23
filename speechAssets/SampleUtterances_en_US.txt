@@ -1,10 +1,18 @@
 OrderIntent my sales for {Date}
 OrderIntent my sales on {Date}
 OrderIntent my sales {Date}
+OrderIntent my sales from {Date}
 OrderIntent my orders for {Date}
 OrderIntent my orders {Date}
 OrderIntent my orders from {Date}
+OrderIntent my orders on {Date}
 
-EmployeeIntent my employees
-
+TimeEntryIntent my time entries for {Date}
+TimeEntryIntent my time entries {Date}
+TimeEntryIntent my time entries on {Date}
+TimeEntryIntent my time entries from {Date}
+TimeEntryIntent my entries for {Date}
+TimeEntryIntent my entries {Date}
+TimeEntryIntent my entries on {Date}
+TimeEntryIntent my entries from {Date}
 

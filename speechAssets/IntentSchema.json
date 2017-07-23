@@ -12,8 +12,14 @@
         }
       ]
     },
-    {
-      "intent": "EmployeeIntent"
+     {
+      "intent": "TimeEntryIntent",
+      "slots": [
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        }
+      ]
     },
     {
       "intent": "AMAZON.HelpIntent"

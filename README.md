@@ -15,11 +15,12 @@ predefined commands.
 
 *  "Alexa, ask Toast for Managers for my sales for today.
 *  "Alexa, ask Toast for Managers for my orders yesterday.
-*  "Alexa, ask Toast for Managers for my sales on July 15 2017. 
+*  "Alexa, ask Toast for Managers for my time entries on July 15 2017. 
 
 <b><i>Alexa will respond to these requests with responses like these:</i></b>
 
-*  "On July 15 2017, there were $2,467.65. (Say another command, or say help for a list of example questions)
+*  "On July 15 2017, there were 25 orders and 45 checks for a total amount of $1,467.65. (Say another command, or say help for a list of example questions)
+*  "On July 15 2017, 14 employees reported 11 total overtime hours with an average of 5.3 regular hours worked each"
 <!-- TODO: Add more example responses -->
 
 ## Future Work:
