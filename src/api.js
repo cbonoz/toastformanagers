@@ -29,6 +29,10 @@ const library = (function () {
         return "https://ws-sandbox-api.eng.toasttab.com:443/usermgmt/v1/oauth/token";
     }
 
+    function getTimeEntries(startDate, endDate) {
+        return `${laborBaseUrl}/timeEntries?startDate=${startDate}T00:00:00.000-0000&endDate=${endDate}T23:59:59.000-0000`
+    }
+
     /*
      * url: request url
      * method: "GET", "POST", etc.
@@ -57,6 +61,7 @@ const library = (function () {
         getOrders: getOrders,
         getOrderInfo: getOrderInfo,
         getEmployees: getEmployees,
+        getTimeEntries: getTimeEntries,
         postAuthToken: postAuthToken,
         createPromise: createPromise,
     };

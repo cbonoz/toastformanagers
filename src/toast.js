@@ -4,7 +4,7 @@ const library = (function () {
     const appName = 'Toast For Managers';
     const WELCOME_TEXT = 'Welcome to ' + appName + ". ";
     const QUERY_REPROMPT_TEXT = 'What next? ';
-    const QUERY_TEXT = 'You can ask me about your orders. ';
+    const QUERY_TEXT = 'You can ask me about your orders or time entries on a given day. ';
     const HELP_TEXT = 'You can say something like: "What were my sales yesterday?" ';
 
     function hello() {

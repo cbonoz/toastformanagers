@@ -64,7 +64,7 @@ const queryHandlers = {
 
         const requestUrl = api.getOrders(queryDateString);
         const tok = self.attributes['tok'];
-        console.log('tok');
+
         const promise = api.createPromise(requestUrl, "GET", tok, key.rguid);
         promise.then(function (res) {
             // console.log(`${requestUrl}: ${res}`);
@@ -86,7 +86,7 @@ const queryHandlers = {
                 }
                 total = Math.round(total * 100) / 100;
                 const orderDateString = moment(orderDate).format("dddd, MMMM Do YYYY");
-                self.emit(':tell', `On ${orderDateString}, you had ${pl('orders', ordersLength, true)} with ${pl('checks', numChecks, true)} for a total of $${total}`);
+                self.emit(':tell', `On ${orderDateString}, you had ${pl('order', ordersLength, true)} with ${pl('check', numChecks, true)} for a total of $${total}`);
                 //, toast.QUERY_REPROMPT_TEXT);
             }).catch((err) => { // Catch any errors.
                 console.error('error in co: ' + err);
@@ -99,17 +99,51 @@ const queryHandlers = {
         });
 
     },
-    // TODO: finish implementing employee information intent
-    'EmployeeIntent': function () {
+    'TimeEntryIntent': function () {
         const self = this;
+        const intentObj = this.event.request.intent;
+        const entryDate = intentObj.slots.Date.value;
 
+        const queryDate = moment(entryDate);
+        if (queryDate.isAfter(moment())) { // if date is after today.
+            self.emit(":tell", "I don\'t know, I am not a wizard");
+        }
+
+        // Query for a single day.
+        const requestUrl = api.getTimeEntries(entryDate, entryDate);
         const tok = self.attributes['tok'];
-        const requestUrl = api.getEmployees();
+
+        const entryDateString = moment(entryDate).format("dddd, MMMM Do YYYY");
         const promise = api.createPromise(requestUrl, "GET", tok, key.rguid);
+
         promise.then(function (res) {
-            console.log(`${requestUrl}: ${res}`);
+            console.log(res);
+            let totalOvertimeHours = 0;
+            let avgHours = 0;
+            let employees = new Set();
+            for (let i in res) {
+                const entry = res[i];
+                avgHours += entry['regularHours'];
+                employees.add(entry['employeeReference']['guid']);
+                totalOvertimeHours += entry['overtimeHours'];
+            }
+
+            avgHours /= employees.size;
+
+            // rounding (one decimal)
+            avgHours = Math.round(avgHours * 10) / 10;
+            totalOvertimeHours = Math.round(totalOvertimeHours * 10) / 10;
+            if (employees.size > 0) {
+                const entryInfoString = `On ${entryDateString}, you had ${pl('employee', employees.size, true)}` +
+                    ` report ${totalOvertimeHours} overtime hours with an average of ${avgHours} regular hours each`;
+                self.emit(':tell', entryInfoString);
+            } else {
+                const entryInfoString = `I could not find any reported time entry records for ${entryDateString}`;
+                self.emit(':tell', entryInfoString);
+            }
         }).catch(function (err) {
-            // API call failed...
+            console.error(err);
+            self.emit(':tell', "Error getting timeEntries for date " + entryDateString + ", " + err)
         });
     },
 
